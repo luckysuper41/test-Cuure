@@ -7,6 +7,7 @@ import FilterCategory from "./components/FilterCategory/FilterCategory";
 import Pagination from "./components/Pagination/Pagination";
 import Spinner from "./components/Spinner/Spinner";
 import DetailProduct from "./components/DetailProduct/DetailProduct";
+import Login from "./components/Login/Login";
 
 import {
   LOADING,
@@ -24,6 +25,10 @@ import {
 function App() {
   // dispatch action
   const dispatch = useDispatch();
+
+  // Login
+  const [login,setLogin] = useState(false);
+  const [userName,setUserName] = useState();
 
   // show DetailProduct
   const [showDetailProduct,SetShowDetailProduct] = useState(false);
@@ -105,13 +110,21 @@ function App() {
 
   return (
     <>
+      {!login ? 
+      <Login
+        setLogin={setLogin}
+        setUserName={setUserName}
+        userName={userName}
+      /> 
+      : null}
+
       <FilterCategory 
         categories={data.categories}
         handleUpdateCategory={updateFilter}
       />
 
       <div className="main-content">
-        <h2 className="title-main-content">Welcome !</h2>
+        <h2 className="title-main-content">Welcome {userName} !</h2>
         {currentFilteredProducts.map((product)=>(
           <Card
             key={product.id}
