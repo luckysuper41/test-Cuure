@@ -1,0 +1,48 @@
+.pagination{
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+     background-color: rgb(54, 54, 54);
+
+     margin: 0 auto;
+     padding: 20px 0 20px 0;
+}
+
+.detail{
+     font-size: 1rem;
+     color: #fff;
+}
+
+.button-page-up-down{
+     position: relative;
+     display: flex;
+     flex-direction: row;
+}
+
+.button-page{
+     background: none;
+     outline: none;
+     border: none;
+
+     color: rgb(221, 221, 221);
+
+     line-height: 2rem;
+     font-size: 3rem;
+     padding: 0 2px;
+     
+     cursor: pointer;
+     transition: 0.3s ease-in-out;
+}
+
+.button-page:hover{
+     color: rgb(255, 255, 255);
+
+}
+
+.button-page[disabled],
+.button-page:disabled{
+     color: rgb(100, 100, 100);
+}

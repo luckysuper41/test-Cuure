@@ -1,0 +1,44 @@
+button.button-like,button.button-dislike{
+     box-sizing: border-box;
+
+     background: none;
+     
+     border-radius: 2px;
+     border: none;
+     color: rgb(146, 146, 146);
+
+     font-weight: bold;
+     font-size: 1.5rem;
+
+     cursor: pointer;
+     outline: none;
+     transition: all 0.2s;
+}
+button.button-like.active{
+     color: rgb(245, 61, 92);
+}
+button.button-dislike.active{
+     color: rgb(8, 8, 8);
+}
+
+button.button-remove{
+     font-weight: bold;
+     font-size: 1rem;
+     
+     border: 1px solid rgb(255, 0, 0);
+     border-radius: 3px;
+     padding: 2px 5px;
+
+     background: none;
+     color: red;
+
+     cursor: pointer;
+     outline: none;
+
+     transition: all 0.3s;
+}
+
+button.button-remove:hover{
+     color: #fff;
+     background: red;
+}
